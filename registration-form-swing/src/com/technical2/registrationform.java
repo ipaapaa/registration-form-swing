@@ -4,16 +4,21 @@
  */
 package com.technical2;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author marcolata
  */
 public class registrationform extends javax.swing.JFrame {
+    
+    
 
     /**
      * Creates new form registrationform
      */
     public registrationform() {
+      
         initComponents();
     }
 
@@ -64,7 +69,6 @@ public class registrationform extends javax.swing.JFrame {
         nameLabel.setText("Name:");
 
         nameText.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
-        nameText.setText("jTextField1");
 
         courseLabel.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
         courseLabel.setText("Course:");
@@ -107,10 +111,8 @@ public class registrationform extends javax.swing.JFrame {
         addressLabel.setText("Address:");
 
         addressText.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
-        addressText.setText("jTextField1");
 
         emailText.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
-        emailText.setText("jTextField1");
 
         emailLabel.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
         emailLabel.setText("Email:");
@@ -119,7 +121,6 @@ public class registrationform extends javax.swing.JFrame {
         contactLabel.setText("Contact Number:");
 
         contactText.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
-        contactText.setText("jTextField1");
 
         registerButton.setBackground(new java.awt.Color(153, 153, 255));
         registerButton.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
@@ -251,7 +252,31 @@ public class registrationform extends javax.swing.JFrame {
     }//GEN-LAST:event_femaleRadioActionPerformed
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
-        // TODO add your handling code here:
+        String textPrompt;
+        
+        if (nameText.getText().equals("") ){
+           textPrompt = "Please fill out the name section.";
+           }
+    
+        else if (addressText.getText().equals("") ){
+           textPrompt ="Please fill out the address section.";
+           
+        }
+        else if (emailText.getText().equals("") ){
+            textPrompt = "Please fill out the email section.";
+            
+        }
+        else if (contactText.getText().equals("") ){
+            textPrompt = "Please fill out the contact number section.";
+            
+
+        } else 
+        {textPrompt = "Registered successfully!";
+
+         JOptionPane.showMessageDialog(null,textPrompt);
+         
+        }
+        
     }//GEN-LAST:event_registerButtonActionPerformed
 
     private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
