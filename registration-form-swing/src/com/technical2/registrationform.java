@@ -33,6 +33,7 @@ public class registrationform extends javax.swing.JFrame {
 
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField4 = new javax.swing.JTextField();
+        genderButtons = new javax.swing.ButtonGroup();
         titleLabel = new javax.swing.JLabel();
         nameLabel = new javax.swing.JLabel();
         nameText = new javax.swing.JTextField();
@@ -91,6 +92,7 @@ public class registrationform extends javax.swing.JFrame {
         yearLabel.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
         yearLabel.setText("Year:");
 
+        genderButtons.add(maleRadio);
         maleRadio.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
         maleRadio.setText("Male");
         maleRadio.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +101,7 @@ public class registrationform extends javax.swing.JFrame {
             }
         });
 
+        genderButtons.add(femaleRadio);
         femaleRadio.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
         femaleRadio.setText("Female");
         femaleRadio.addActionListener(new java.awt.event.ActionListener() {
@@ -233,7 +236,7 @@ public class registrationform extends javax.swing.JFrame {
                     .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))<none>
         );
 
         pack();
@@ -334,6 +337,7 @@ public class registrationform extends javax.swing.JFrame {
     private javax.swing.JTextField emailText;
     private javax.swing.JButton exitButton;
     private javax.swing.JRadioButton femaleRadio;
+    private javax.swing.ButtonGroup genderButtons;
     private javax.swing.JLabel genderLabel;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JTextField jTextField4;
