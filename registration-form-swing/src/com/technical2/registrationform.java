@@ -24,6 +24,18 @@ public class registrationform extends javax.swing.JFrame {
         initComponents();
     }
     
+    public void clear(){
+        /*This function clears the application text and radio fields when called*/
+        nameText.setText("");
+        addressText.setText("");
+        emailText.setText("");
+        contactText.setText("");
+        maleRadio.setSelected(false);
+        femaleRadio.setSelected(false);
+        
+        
+    }
+    
     public void close(){
         /*This function closes the application when called*/
         WindowEvent closeWindow = new WindowEvent (this, WindowEvent.WINDOW_CLOSING);
@@ -267,6 +279,7 @@ public class registrationform extends javax.swing.JFrame {
         if (nameText.getText().equals("") ){
            textPrompt = "Please fill out the name section.";
            JOptionPane.showMessageDialog(null,textPrompt);
+           
            }
     
         else if (addressText.getText().equals("") ){
@@ -295,13 +308,14 @@ public class registrationform extends javax.swing.JFrame {
         {textPrompt = "Registered successfully!";
 
          JOptionPane.showMessageDialog(null,textPrompt);
+         clear();
          
         }
         
     }//GEN-LAST:event_registerButtonActionPerformed
 
     private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
-        // TODO add your handling code here:
+        clear();
     }//GEN-LAST:event_clearButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
