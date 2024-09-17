@@ -4,6 +4,8 @@
  */
 package com.technical2;
 
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,12 +16,18 @@ public class registrationform extends javax.swing.JFrame {
     
     
 
-    /**
+    /*
      * Creates new form registrationform
      */
     public registrationform() {
       
         initComponents();
+    }
+    
+    public void close(){
+        /*This function closes the application when called*/
+        WindowEvent closeWindow = new WindowEvent (this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
     }
 
     /**
@@ -236,9 +244,8 @@ public class registrationform extends javax.swing.JFrame {
                     .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))<none>
+                .addContainerGap(30, Short.MAX_VALUE))
         );
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -298,7 +305,7 @@ public class registrationform extends javax.swing.JFrame {
     }//GEN-LAST:event_clearButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
-        // TODO add your handling code here:
+        close();
     }//GEN-LAST:event_exitButtonActionPerformed
 
     /**
