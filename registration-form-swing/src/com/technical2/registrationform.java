@@ -33,6 +33,7 @@ public class registrationform extends javax.swing.JFrame {
 
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField4 = new javax.swing.JTextField();
+        genderButtons = new javax.swing.ButtonGroup();
         titleLabel = new javax.swing.JLabel();
         nameLabel = new javax.swing.JLabel();
         nameText = new javax.swing.JTextField();
@@ -91,6 +92,7 @@ public class registrationform extends javax.swing.JFrame {
         yearLabel.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
         yearLabel.setText("Year:");
 
+        genderButtons.add(maleRadio);
         maleRadio.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
         maleRadio.setText("Male");
         maleRadio.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +101,7 @@ public class registrationform extends javax.swing.JFrame {
             }
         });
 
+        genderButtons.add(femaleRadio);
         femaleRadio.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
         femaleRadio.setText("Female");
         femaleRadio.addActionListener(new java.awt.event.ActionListener() {
@@ -263,7 +266,14 @@ public class registrationform extends javax.swing.JFrame {
            textPrompt ="Please fill out the address section.";
            JOptionPane.showMessageDialog(null,textPrompt);
            
+        } 
+        
+        else if(!maleRadio.isSelected() && !femaleRadio.isSelected()){
+            textPrompt = "Please state your gender.";
+            JOptionPane.showMessageDialog(null,textPrompt);
+            
         }
+  
         else if (emailText.getText().equals("") ){
             textPrompt = "Please fill out the email section.";
             JOptionPane.showMessageDialog(null,textPrompt);
@@ -338,6 +348,7 @@ public class registrationform extends javax.swing.JFrame {
     private javax.swing.JTextField emailText;
     private javax.swing.JButton exitButton;
     private javax.swing.JRadioButton femaleRadio;
+    private javax.swing.ButtonGroup genderButtons;
     private javax.swing.JLabel genderLabel;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JTextField jTextField4;
