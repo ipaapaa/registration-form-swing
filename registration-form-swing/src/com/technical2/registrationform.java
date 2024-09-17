@@ -259,18 +259,29 @@ public class registrationform extends javax.swing.JFrame {
         
         if (nameText.getText().equals("") ){
            textPrompt = "Please fill out the name section.";
+           JOptionPane.showMessageDialog(null,textPrompt);
            }
     
         else if (addressText.getText().equals("") ){
            textPrompt ="Please fill out the address section.";
+           JOptionPane.showMessageDialog(null,textPrompt);
            
+        } 
+        
+        else if(!maleRadio.isSelected() && !femaleRadio.isSelected()){
+            textPrompt = "Please state your gender.";
+            JOptionPane.showMessageDialog(null,textPrompt);
+            
         }
+  
         else if (emailText.getText().equals("") ){
             textPrompt = "Please fill out the email section.";
+            JOptionPane.showMessageDialog(null,textPrompt);
             
         }
         else if (contactText.getText().equals("") ){
             textPrompt = "Please fill out the contact number section.";
+            JOptionPane.showMessageDialog(null,textPrompt);
             
 
         } else 
